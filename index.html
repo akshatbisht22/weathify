@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>WeathLoom</title>
+    <link rel="shortcut icon" href="assests/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="weather_fetch()">
+    <div id="header">
+      <div id="navbar">
+        <div id="navbarlogo">
+          <img src="assests/logo.png" alt="Header_Logo" />
+        </div>
+        <div id="navbarlinks">
+          <a href="about.html">ABOUT</a>
+        </div>
+      </div>
+    </div>
+    <div id="appcont">
+      <div id="app">
+        <div id="status">
+          <div id="main_temp">
+            <h2 id="weather_title"></h2>
+            <h3 id="weather_desc"></h3>
+          </div>
+          <div id="weather_descbox">
+            <p id="temperature"></p>
+            <p id="windspeed"></p>
+            <p id="humidity_lvl"></p>
+          </div>
+
+          <div id="location">
+            <strong><h4 id="location"></h4></strong>
+          </div>
+        </div>
+
+        <div id="status_img">
+          <img src="" id="status_img_src" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
