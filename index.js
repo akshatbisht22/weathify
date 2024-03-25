@@ -1,4 +1,6 @@
 async function weather_fetch() {
+  if (navigator.geolocation) {
+    
     navigator.geolocation.getCurrentPosition(async (position) => {
       const user_latitude = position.coords.latitude;
       const user_longitude = position.coords.longitude;
@@ -21,12 +23,16 @@ async function weather_fetch() {
       const weath_city = weather_object.name;
       const img = `https://openweathermap.org/img/wn/${weather_object.weather[0].icon}@4x.png`;
       
-    document.getElementById("weather_title").innerText = weath_main;
-    document.getElementById("weather_desc").innerText = weath_desc;
-    document.getElementById("temperature").innerText = `${weath_temp_kelvin_slice}°C`;
-    document.getElementById("windspeed").innerText = `Windspeed : ${weath_wind} m/s`;
-    document.getElementById("humidity_lvl").innerText = `Humidity Level : ${weath_humidity}%`;
-    document.getElementById("status_img_src").src=img;
-    document.getElementById("location").innerText = `Location : ${weath_city}`;
-  });
+      document.getElementById("weather_title").innerText = weath_main;
+      document.getElementById("weather_desc").innerText = weath_desc;
+      document.getElementById("temperature").innerText = `${weath_temp_kelvin_slice}°C`;
+      document.getElementById("windspeed").innerText = `Windspeed : ${weath_wind} m/s`;
+      document.getElementById("humidity_lvl").innerText = `Humidity Level : ${weath_humidity}%`;
+      document.getElementById("status_img_src").src=img;
+      document.getElementById("location").innerText = `Location : ${weath_city}`;
+    });
+  }else{
+    alert("ERROR. Please refresh the page and enable location permission.")
+  }
 }
+  
