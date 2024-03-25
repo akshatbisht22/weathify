@@ -9,6 +9,7 @@ body {
   background: linear-gradient(15deg, #ebebeb, #3eabff, #0085eb);
   height: 100vh;
   background-attachment: fixed;
+
 }
 
 #navbar {
@@ -36,6 +37,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-bottom: 100px;
 }
 
 #status {
