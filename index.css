@@ -6,6 +6,9 @@
 body {
   margin: 0px;
   padding: 0px 120px;
+  background: linear-gradient(15deg, #ebebeb, #3eabff, #0085eb);
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 #navbar {
@@ -28,7 +31,7 @@ body {
 }
 
 #app {
-  margin: 0px 70px;
+  margin: 0px 30px;
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -36,16 +39,33 @@ body {
 }
 
 #status {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.79);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.79);
   width: 60%;
-  margin-right: 100px;
   border-radius: 6px;
 }
-#weather_descbox{
-    padding: 10px 10px;
+#weather_descbox {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 40px;
+  padding-bottom: 100px;
 }
-#location{
-    padding: 10px 10px;
+#temperature{
+  font-weight: 700;
+  font-size: 51px;
+  margin: 2px 0px;
+}
+
+#minute_details{
+  width: 50%;
+  text-align: right;
+  padding-right: 20px;
+}
+#temp{
+  width: 50%;
+}
+#location {
+  background: white;
+  padding: 10px 10px;
 }
 #main_temp {
   background: black;
@@ -56,6 +76,9 @@ body {
 #weather_title {
   margin-top: 3px;
   margin-bottom: 0px;
+}
+#status_img_src{
+  margin-left: 120px;
 }
 
 #weather_desc {
@@ -75,34 +98,81 @@ body {
     margin: 0px 0px;
     margin-top: 30px;
   }
+  
+#status {
+  width: 85%;
+}
+#status_img_src{
+  margin-left: 00px;
+}
+#app {
+  flex-direction: column-reverse;
+  text-align: center;
+}
+body {
+  padding: 0px 30px;
+}
+#navbarlogo img {
+  height: 55px;
+}
+
+#main_temp {
+  margin-right: 0px;
+}
+
+#status {
+  margin-right: 0px;
+}
+#temperature {
+  font-weight: 700;
+  font-size: 65px;
+  margin: 2px 0px;
+}
 }
 
 @media (max-width: 750px) and (min-width: 0px) {
   body {
     padding: 0px 60px;
   }
+  #weather_descbox{
+    padding: 50px 10px;
+    padding-bottom: 100px;
+  }
 }
 
 @media (max-width: 645px) and (min-width: 0px) {
-  #app {
-    flex-direction: column-reverse;
+  #temperature {
+    text-align: center;
+    font-weight: 700;
+    font-size: 55px;
+    margin: 2px 0px;
+  }
+  #weather_descbox{
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  #status {
+  #minute_details{
+    padding-right: 0px;
+    text-align: center;
     width: 100%;
   }
-  body {
-    padding: 0px 30px;
+  #temp{
+    width: 100%;
   }
-  #navbarlogo img {
-    height: 55px;
-  }
-
-  #main_temp {
-    margin-right: 0px;
+#status {
+  width: 100%;
+}
+body {
+  padding: 0px 30px;
+}
 }
 
-#status {
-    margin-right: 0px;
+@media (max-width: 330px) and (min-width: 0px) {
+  #temperature {
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    margin: 2px 0px;
 }
 }

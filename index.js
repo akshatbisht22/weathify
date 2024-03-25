@@ -13,8 +13,8 @@ async function weather_fetch() {
       const weath_desc = weather_object.weather[0].description;  
       const weath_temp = weather_object.main.temp;
       const weath_temp_kelvin = `${weath_temp-273.15}`;
-      const weath_temp_kelvin_slice = weath_temp_kelvin.slice(0,7)
-      const weath_temp_celcius = `${(weath_temp-32)*5/9}`;
+      const weath_temp_kelvin_slice = weath_temp_kelvin.slice(0,4)
+      const weath_temp_celcius = `${(weath_temp - 273.15) * 9/5 + 32}`;
       const weath_temp_celcius_slice = weath_temp_celcius.slice(0,7)
       const weath_humidity = weather_object.main.humidity;
       const weath_wind = weather_object.wind.speed;
@@ -23,7 +23,7 @@ async function weather_fetch() {
       
     document.getElementById("weather_title").innerText = weath_main;
     document.getElementById("weather_desc").innerText = weath_desc;
-    document.getElementById("temperature").innerText = `Temperature : ${weath_temp_kelvin_slice}F & ${weath_temp_celcius_slice}C`;
+    document.getElementById("temperature").innerText = `${weath_temp_kelvin_slice}°C`;
     document.getElementById("windspeed").innerText = `Windspeed : ${weath_wind} m/s`;
     document.getElementById("humidity_lvl").innerText = `Humidity Level : ${weath_humidity}%`;
     document.getElementById("status_img_src").src=img;
